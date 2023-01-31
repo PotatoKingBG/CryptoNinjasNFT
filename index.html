@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CryptoNinjas</title>
     <script
-      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      src="https://kit.fontawesome.com/10e9bbdbc7.js"
       crossorigin="anonymous"
     ></script>
+    <script src="app.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,7 +22,7 @@
     <div class="bg__image">
       <section class="landing">
         <nav>
-          <a href="" class="index.html"
+          <a href="index.html" class="site__logo"
             ><img src="./assets/logo.png" alt=""
           /></a>
           <ul class="navbar">
@@ -33,15 +34,40 @@
                 >Collections</a
               >
             </li>
-            <li><a href="" class="nav__link glow-on-hover">About us</a></li>
+            <li><a href="#contact" class="nav__link glow-on-hover">About us</a></li>
           </ul>
+          <button class="btn__menu" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+              <i class="fas fa-times"></i>
+            </button>
+            <ul class="menu__links">
+              <li class="menu__list">
+                <a href="index.html" class="menu__link" onclick="closeMenu()">Home</a>
+              </li>
+              <li class="menu__list">
+                <a href="#collection-1" class="menu__link" onclick="closeMenu()"
+                  >Collections</a
+                >
+              </li>
+              <li class="menu__list">
+                <a href="" class="menu__link no-cursor" onclick="closeMenu()"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
         </nav>
         <header>
           <h1 class="header__title">
             <span class="blue">CryptoNinjas</span> - crypto trading community.
           </h1>
+
           <a href="#collection">
             <img
+              style="z-index: 10"
               class="down__button"
               src="./assets/free-arrow-down-icon-3101-thumb.svg"
               alt="Scroll-down-button"
@@ -54,7 +80,7 @@
       <div class="transition__svg--wrapper">
         <div class="transition__svg2">
           <section class="image__slider" id="collection-1">
-            <div class="slide__track glow-on-hover">
+            <div class="slide__track">
               <div class="slide">
                 <img src="./assets/download (1).png" alt="" />
               </div>
@@ -159,21 +185,52 @@
         </div>
       </section>
       <embed class="svg__holder" src="./assets/svg2.svg" type="" />
+      <section class="about-us row">
+        <h1>Who are we?</h1>
+        <div class="about-us__wrapper">
+          <div class="about-us__text">
+            <p>
+              We are a group of experienced crypto Ninjas who fight for
+              financial freedom and share practices, experience, and knowledge
+              in the field of technical analysis because together we are
+              stronger!
+            </p>
+          </div>
+          <div class="about-us__content">
+            <a href="" class="icon"><i class="fa-solid fa-people-group"></i></a>
+          </div>
+        </div>
+        <div class="about-us__wrapper">
+          <div class="about-us__content">
+            <img class="position__fix" src="./assets/ta.png" alt="" />
+          </div>
+          <div class="about-us__text">
+            <p>
+              We manage to trade the trends and ranges in the cryptocurrency
+              markets! We perform and execute by the same rules and possibilites
+              provided by techical analysis and indicators.
+            </p>
+          </div>
+        </div>
+      </section>
       <section class="FAQ">
+        <h1>Frequently Asked Questions</h1>
         <div class="FAQ__wrapper row">
           <div class="question__wrapper">
             <h2>Is there a discord?</h2>
             <p>
               Yes, however the Ninja channels are NFT-gated. You must hold a
-              Collection #1 Avatar to enter. Once inside, you will have access to the private CryptoNinja
-              channels that include all the stock, crypto setups & analysis.
+              Collection #1 Avatar to enter. Once inside, you will have access
+              to the private CryptoNinja channels that include all the stock,
+              crypto setups & analysis.
             </p>
-           
           </div>
           <div class="question__wrapper">
+            <p></p>
             <h2>How much is a CryptoNinjas NFT?</h2>
             <p>
-              We use the currency of the InternetComputer ($ICP). Our mint prices start between 3-5 $ICP.
+              We use the currency of the InternetComputer ($ICP). Our mint
+              prices start between 3-5 $ICP.
             </p>
           </div>
           <div class="question__wrapper">
@@ -201,6 +258,43 @@
           </div>
         </div>
       </section>
+
+      <footer>
+        <section class="footer">
+          <div class="footer__row">
+            <a href="#">
+              <figure class="footer__logo">
+                <img src="assets/logo.png" class="footer__logo--img" alt="" />
+              </figure>
+            </a>
+            <div class="footer__list" id="contact">
+              <a
+                href="https://entrepot.app/marketplace/cryptoninjas-avatars"
+                target="_blank"
+                class="fa-solid fa-ticket footer__link no-cursor"
+              ></a>
+              <a
+                href="https://discord.gg/a2jGpZp7KF"
+                target="_blank"
+                class="fa-brands fa-discord footer__link no-cursor"
+              ></a>
+              <a
+                href="https://twitter.com/Crypt0Ninjas"
+                target="_blank"
+                class="fa-brands fa-twitter footer__link no-cursor"
+              ></a>
+              <a
+                href="https://www.instagram.com/crypt0ninjasnft/"
+                target="_blank"
+                class="fa-brands fa-instagram footer__link no-cursor"
+              ></a>
+            </div>
+            <div class="footer__copyright">
+              Copyright &copy; 2023 CryptoNinjas
+            </div>
+          </div>
+        </section>
+      </footer>
     </main>
   </body>
 </html>
